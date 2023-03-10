@@ -49,6 +49,7 @@
 		9027F06A29BBB8F100D45A5B /* SwiftAlgoDocsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAlgoDocsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9027F06E29BBB8F100D45A5B /* SwiftAlgoDocsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgoDocsUITests.swift; sourceTree = "<group>"; };
 		9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgoDocsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9027F07D29BBD15000D45A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		9027F04C29BBB8F000D45A5B /* SwiftAlgoDocs */ = {
 			isa = PBXGroup;
 			children = (
+				9027F07D29BBD15000D45A5B /* Info.plist */,
 				9027F04D29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift */,
 				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
 				9027F05429BBB8F000D45A5B /* ContentView.swift */,
@@ -427,6 +429,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftAlgoDocs/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -466,6 +469,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftAlgoDocs/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
