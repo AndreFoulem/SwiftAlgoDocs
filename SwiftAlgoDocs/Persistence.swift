@@ -9,8 +9,13 @@ import CoreData
 import Combine
 import CloudKit
 
-class PersistenceController {
+class PersistenceController: ObservableObject {
     static let shared = PersistenceController()
+  
+    let container: NSPersistentCloudKitContainer
+    var subscriptions = Set<AnyCancellable>()
+  
+  @Published var syncErrorMessage: String? = nil
   
 
     //MARK: - SwiftUI Preview Helper
@@ -24,8 +29,7 @@ class PersistenceController {
         return result
     }()
 
-    let container: NSPersistentCloudKitContainer
-    var subscriptions = Set<AnyCancellable>()
+
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "SwiftAlgoDocs")
@@ -47,6 +51,8 @@ class PersistenceController {
       //-> ICLOUD LINE
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
+      
+        checkSyncStatus()
     }
 }
 
@@ -72,14 +78,33 @@ extension PersistenceController {
           print("")
         } else {
           switch event.type {
-            case .setup: print("cloudkit event finished")
-            case .import: print("cloudkit event import")
-            case .export: print("Cloudkit event export")
+            case .setup: print("cloudkit - event finished")
+            case .import: print("cloudkit - event import")
+            case .export: print("Cloudkit  - event export")
             @unknown default:
               print("cloudkitevent - added a new event type")
           }
+          
+          if  event.succeeded {
+            print("cloudkit - event succeeded")
+          } else {
+            print("cloudkit - not succeeded")
+          }
+          if let error = event.error as? CKError {
+            print("cloudkit event - errror \(error.localizedDescription)")
+//            switch error.code {
+//              case .quotaExceeded:
+//                self.syncErrorMessage = " quota exceeded, please free up case on Icloud"
+//                print("quota exceeded, please free up case on Icloud")
+//
+//            }
+            
+             // error.code = .networkfailure
+            // CODE 3
+          }
         }
         
+      
       }
       .store(in: &subscriptions)
   }
