@@ -11,6 +11,7 @@ import CoreData
 extension Note {
   
   //-> move the Binding from body view to this property
+  //** Syntaxic sugar
   var title: String {
     get {
       self.title_ ?? ""
