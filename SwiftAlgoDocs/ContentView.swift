@@ -21,7 +21,7 @@ struct ContentView: View {
             List {
                 ForEach(notes) { note in
                     NavigationLink {
-                        Text("Item at \(note.creationDate!, formatter: itemFormatter)")
+                     NoteDetailView(note: note)
                     } label: {
                       Text(note.creationDate!, formatter: itemFormatter)
                     }
@@ -29,11 +29,6 @@ struct ContentView: View {
                 .onDelete(perform: deleteNotes)
             }
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
                 ToolbarItem {
                     Button(action: addNote) {
                         Label("Add Note", systemImage: "plus")
@@ -45,31 +40,13 @@ struct ContentView: View {
     }
 
     private func addNote() {
-        withAnimation {
-            let newNote = Note(context: viewContext)
-            newNote.creationDate = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+          let newNote = Note(title: "New Note", context: viewContext)
     }
 
     private func deleteNotes(offsets: IndexSet) {
-        withAnimation {
             offsets.map { notes[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
+  
 }
 
 private let itemFormatter: DateFormatter = {
