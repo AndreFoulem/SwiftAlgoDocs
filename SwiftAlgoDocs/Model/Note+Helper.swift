@@ -9,6 +9,18 @@ import Foundation
 import CoreData
 
 extension Note {
+  
+  //-> move the Binding from body view to this property
+  var title: String {
+    get {
+      self.title_ ?? ""
+    }
+    set {
+      self.title_ = newValue
+    }
+  }
+  
+  
   convenience init(title: String, context: NSManagedObjectContext) {
     self.init(context: context)
     self.title = title
@@ -26,7 +38,7 @@ extension Note {
   }
   
   //-> .all is a static property on NSPredicate extension
-  func fetch(_ predicate: NSPredicate = .all) -> NSFetchRequest<Note> {
+  static func fetch(_ predicate: NSPredicate = .all) -> NSFetchRequest<Note> {
     let request = NSFetchRequest<Note>(entityName: "Note")
     request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
     request.predicate = predicate
