@@ -107,7 +107,7 @@
 				9027F07D29BBD15000D45A5B /* Info.plist */,
 				9027F04D29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift */,
 				90D3A90329BEAAAC00A1D62E /* Model */,
-				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
+				9059F04B29BF899800779B6F /* Core Data Helper */,
 				9027F05429BBB8F000D45A5B /* ContentView.swift */,
 				90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */,
 				9027F05829BBB8F100D45A5B /* SwiftAlgoDocs.entitlements */,
@@ -141,6 +141,14 @@
 				9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */,
 			);
 			path = SwiftAlgoDocsUITests;
+			sourceTree = "<group>";
+		};
+		9059F04B29BF899800779B6F /* Core Data Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
+			);
+			path = "Core Data Helper";
 			sourceTree = "<group>";
 		};
 		90D3A90329BEAAAC00A1D62E /* Model */ = {

@@ -25,4 +25,12 @@ extension Note {
     self.creationDate = Date()
   }
   
+  func fetch(_ predicate: NSPredicate = NSPredicate(format: "TRUEPREDICATE")) -> NSFetchRequest<Note> {
+    let request = NSFetchRequest<Note>(entityName: "Note")
+    request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
+    request.predicate = predicate
+    
+    return request
+  }
+  
 }

@@ -5,13 +5,12 @@
 //  Created by AndreMacBook on 2023-03-10.
 //
 
-import SwiftUI
-import CoreData
+  import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
+  @FetchRequest(
       sortDescriptors: [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)],
         animation: .default)
     private var notes: FetchedResults<Note>
