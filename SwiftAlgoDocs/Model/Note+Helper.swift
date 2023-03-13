@@ -25,7 +25,8 @@ extension Note {
     self.creationDate = Date()
   }
   
-  func fetch(_ predicate: NSPredicate = NSPredicate(format: "TRUEPREDICATE")) -> NSFetchRequest<Note> {
+  //-> .all is a static property on NSPredicate extension
+  func fetch(_ predicate: NSPredicate = .all) -> NSFetchRequest<Note> {
     let request = NSFetchRequest<Note>(entityName: "Note")
     request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.creationDate, ascending: true)]
     request.predicate = predicate
