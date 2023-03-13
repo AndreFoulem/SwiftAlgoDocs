@@ -16,6 +16,7 @@
 		9027F06529BBB8F100D45A5B /* SwiftAlgoDocsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027F06429BBB8F100D45A5B /* SwiftAlgoDocsTests.swift */; };
 		9027F06F29BBB8F100D45A5B /* SwiftAlgoDocsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027F06E29BBB8F100D45A5B /* SwiftAlgoDocsUITests.swift */; };
 		9027F07129BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */; };
+		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9027F06E29BBB8F100D45A5B /* SwiftAlgoDocsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgoDocsUITests.swift; sourceTree = "<group>"; };
 		9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAlgoDocsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9027F07D29BBD15000D45A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +104,12 @@
 			children = (
 				9027F07D29BBD15000D45A5B /* Info.plist */,
 				9027F04D29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift */,
+				90D3A90329BEAAAC00A1D62E /* Model */,
 				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
 				9027F05429BBB8F000D45A5B /* ContentView.swift */,
-				9027F05629BBB8F100D45A5B /* Assets.xcassets */,
 				9027F05829BBB8F100D45A5B /* SwiftAlgoDocs.entitlements */,
 				9027F05129BBB8F000D45A5B /* SwiftAlgoDocs.xcdatamodeld */,
+				9027F05629BBB8F100D45A5B /* Assets.xcassets */,
 				9027F05929BBB8F100D45A5B /* Preview Content */,
 			);
 			path = SwiftAlgoDocs;
@@ -135,6 +138,14 @@
 				9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */,
 			);
 			path = SwiftAlgoDocsUITests;
+			sourceTree = "<group>";
+		};
+		90D3A90329BEAAAC00A1D62E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			files = (
 				9027F04E29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift in Sources */,
 				9027F05329BBB8F000D45A5B /* SwiftAlgoDocs.xcdatamodeld in Sources */,
+				90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */,
 				9027F05529BBB8F000D45A5B /* ContentView.swift in Sources */,
 				9027F05029BBB8F000D45A5B /* Persistence.swift in Sources */,
 			);
