@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import SwiftAlgoDocs
 
 final class NotesTest: XCTestCase {
 
@@ -14,7 +15,7 @@ final class NotesTest: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+  
     }
 
 }
