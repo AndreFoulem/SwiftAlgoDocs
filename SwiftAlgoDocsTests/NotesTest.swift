@@ -45,7 +45,23 @@ final class NotesTest: XCTestCase {
       
       XCTAssertNotNil(note.creationDate,
       "note should have creationDateProperty")
-      
     }
+  
+  func test_Notes_Updating_Title() {
+    let note = Note(title: "old", context: context)
+    note.title = "new"
+    
+    XCTAssertTrue(note.title == "new",
+    "updated the title to new")
+  }
+  
+  func test_Fetch_All_Notes() {
+    _ = Note(title: "default", context: context)
+    let fetch = Note.fetch(.all)
+    let fetchedNotes = try? context.fetch(fetch)
+    
+    XCTAssertNotNil(fetchedNotes)
+    XCTAssertTrue(fetchedNotes!.count > 0)
+  }
 
 }
