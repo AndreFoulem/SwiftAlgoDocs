@@ -67,6 +67,11 @@ class PersistenceController: ObservableObject {
     }
     return result
   }()
+  
+  //-> TESTING CONTAINER - IN MEMORY PERSISTENCE CONTROLLER
+  static func createEmpty() -> PersistenceController {
+    return PersistenceController(inMemory: true)
+  }
  
 }
 
