@@ -20,6 +20,7 @@
 		9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */; };
 		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 		90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */; };
+		90D94B9929C0DB5000912D23 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D94B9829C0DB5000912D23 /* Status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
 		90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		90D94B9829C0DB5000912D23 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */,
+				90D94B9829C0DB5000912D23 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				9027F04E29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift in Sources */,
 				9027F05329BBB8F000D45A5B /* SwiftAlgoDocs.xcdatamodeld in Sources */,
 				90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */,
+				90D94B9929C0DB5000912D23 /* Status.swift in Sources */,
 				9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */,
 				90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */,
 				9027F05529BBB8F000D45A5B /* ContentView.swift in Sources */,
