@@ -21,8 +21,17 @@ final class NotesTest: XCTestCase {
       self.controller = PersistenceController.createEmpty()
       
     }
+  
     override func tearDownWithError() throws {
       self.controller = nil
+    }
+  
+    func test_Notes_Creation() {
+        let noteTitle = "new"
+        let note = Note(title: noteTitle, context: context)
+        XCTAssertTrue(
+          note.title == noteTitle,
+          "Note should have the title given in the convenience initializer")
     }
 
 }
