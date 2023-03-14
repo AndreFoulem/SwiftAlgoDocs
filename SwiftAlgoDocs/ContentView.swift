@@ -36,7 +36,7 @@ struct ContentView: View {
     }
 
     private func addNote() {
-          let newNote = Note(title: "New Note", context: viewContext)
+      _ = Note(title: "New Note", context: viewContext)
     }
 
     private func deleteNotes(offsets: IndexSet) {
