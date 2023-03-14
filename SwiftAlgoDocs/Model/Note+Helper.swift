@@ -11,14 +11,10 @@ import CoreData
 extension Note {
   
   //-> move the Binding from body view to this property
-  //** Syntaxic sugar
+  //** Syntaxic sugar - Handle the optional
   var title: String {
-    get {
-      self.title_ ?? ""
-    }
-    set {
-      self.title_ = newValue
-    }
+    get { self.title_ ?? "" }
+    set { self.title_ = newValue }
   }
   
   
