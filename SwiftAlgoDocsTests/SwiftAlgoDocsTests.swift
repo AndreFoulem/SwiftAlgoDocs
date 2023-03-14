@@ -4,6 +4,11 @@
 //
 //  Created by AndreMacBook on 2023-03-10.
 //
+//-> Fast:
+//-> Isolated: independent of other tests
+//-> Repeatable: deterministic
+//-> Self-verifying: Should fail or pass. You don't want to check the logfile
+//-> Timely: Can act as a blueprint
 
 import XCTest
 
