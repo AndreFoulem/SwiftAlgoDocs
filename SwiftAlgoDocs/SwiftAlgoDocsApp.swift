@@ -25,7 +25,7 @@ struct SwiftAlgoDocsApp: App {
         }
       #if os(iOS)
         .onChange(of: scenePhase) { newScenePhase in
-          if newScenePhase = .background {
+          if newScenePhase == .background {
             persistenceController.save()
           }
         }
