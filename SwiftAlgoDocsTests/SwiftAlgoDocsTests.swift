@@ -6,7 +6,7 @@
 //
 //-> Fast:
 //-> Isolated: independent of other tests
-//-> Repeatable: deterministic
+//-> Repeatable: deterministic - same output
 //-> Self-verifying: Should fail or pass. You don't want to check the logfile
 //-> Timely: Can act as a blueprint
 
