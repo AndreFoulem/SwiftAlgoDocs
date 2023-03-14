@@ -103,6 +103,13 @@ final class NotesTest: XCTestCase {
     }
   }
   
+  func test_IsFavorite_Default_Value() {
+    let note = Note(title: "default note", context: context)
+    
+    XCTAssertFalse(note.isFavorite
+      ,"isFavorite bool default is NO : a note is note favorite by default")
+
+  }
 
 
 }
