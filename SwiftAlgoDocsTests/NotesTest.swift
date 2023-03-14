@@ -76,8 +76,17 @@ final class NotesTest: XCTestCase {
   }
   
   func test_Delete_Note() {
-    _ = Note(title: "default note", context: context)
+    let note = Note(title: "default note", context: context)
     
+    Note.delete(note: note)
+    
+    let fetchedNotes = try? context.fetch(Note.fetch(.all))
+    
+    XCTAssertTrue(fetchedNotes?.count == 0,
+    "deleted note should not be in database")
+
+    XCTAssertFalse(fetchedNotes!.contains(note),
+    "deleted note should not be in database")
   }
 
 }

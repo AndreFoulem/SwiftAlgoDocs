@@ -48,7 +48,11 @@ extension Note {
   }
   
   static func delete(note: Note) {
-    //TODO
+      //get context
+    guard let context = note.managedObjectContext else {return}
+  
+    context.delete(note)
   }
+  
   
 }
