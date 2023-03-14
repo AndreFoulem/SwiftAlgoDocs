@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NoteDetailView: View {
   @ObservedObject var note: Note
-  
+
     var body: some View {
 //      let textBinding = Binding(
 //        get: { note.title ?? "" },
@@ -40,6 +40,10 @@ struct NoteDetailView: View {
         .foregroundColor(.pink)
       }//vs
       .padding()
+      
+      .onDisappear {
+        PersistenceController.shared.save()
+      }
       
     }//body
 }

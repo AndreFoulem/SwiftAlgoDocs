@@ -15,26 +15,15 @@ class PersistenceController: ObservableObject {
     let container: NSPersistentCloudKitContainer
     var subscriptions = Set<AnyCancellable>()
   
-  @Published var syncErrorMessage: String? = nil
-  
-
-    //MARK: - SwiftUI Preview Helper
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-          let newNote = Note(title: "note \(String(describing: index))", context: viewContext)
-            newNote.creationDate = Date()
-        }
-        return result
-    }()
-
-
+    @Published var syncErrorMessage: String? = nil
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "SwiftAlgoDocs")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+            //-> cloudKitContainerOptons = nil  :: make sure objects from preview is not saved to CK
+            container.persistentStoreDescriptions.first!.cloudKitContainerOptions = nil
+          
        //-* ELSE persistent
         } else {
           #if DEBUG
@@ -54,6 +43,31 @@ class PersistenceController: ObservableObject {
       
         checkSyncStatus()
     }
+  
+  func save() {
+    let context = container.viewContext
+    
+    guard context.hasChanges else { return }
+    
+    do {
+      try context.save()
+    } catch {
+      let nsError = error as NSError
+      fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    }
+  }
+  
+    //MARK: - SwiftUI Preview Helper
+  static var preview: PersistenceController = {
+    let result = PersistenceController(inMemory: true)
+    let viewContext = result.container.viewContext
+    for _ in 0..<10 {
+      let newNote = Note(title: "note \(String(describing: index))", context: viewContext)
+      newNote.creationDate = Date()
+    }
+    return result
+  }()
+ 
 }
 
 extension PersistenceController {
