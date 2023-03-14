@@ -7,3 +7,12 @@
 
 import Foundation
 
+enum Status: String, Identifiable, CaseIterable {
+  case draft = "Draft"
+  case review = "Review"
+  case archived = "Archived"
+  
+  var id: String {
+    return self.rawValue
+  }
+}
