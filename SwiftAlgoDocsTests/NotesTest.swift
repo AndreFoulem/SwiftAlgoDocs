@@ -11,19 +11,18 @@ import CoreData
 
 final class NotesTest: XCTestCase {
 
-    var container: NSPersistentContainer!
+    var controller: PersistenceController!
   
     var context: NSManagedObjectContext {
-      container.viewContext
+        controller.container.viewContext
     }
   
     override func setUpWithError() throws {
-          
+      self.controller = PersistenceController.createEmpty()
       
     }
-
     override func tearDownWithError() throws {
-  
+      self.controller = nil
     }
 
 }
