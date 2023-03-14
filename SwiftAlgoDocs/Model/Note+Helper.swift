@@ -54,5 +54,9 @@ extension Note {
     context.delete(note)
   }
   
+  static func asyncSave() {
+    //TODO
+  }
+  
   
 }
