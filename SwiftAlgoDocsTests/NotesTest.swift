@@ -29,9 +29,20 @@ final class NotesTest: XCTestCase {
     func test_Notes_Creation() {
         let noteTitle = "new"
         let note = Note(title: noteTitle, context: context)
+      
         XCTAssertTrue(
           note.title == noteTitle,
           "Note should have the title given in the convenience initializer")
     }
+  
+  func test_Notes_CreationDate() {
+    let note = Note(context: context)
+    
+    let noteConvenienceInit = Note(title: "new", context: context)
+    
+    XCTAssertNotNil(noteConvenienceInit.creationDate,
+    "note should have creationDateProperty")
+    
+  }
 
 }
