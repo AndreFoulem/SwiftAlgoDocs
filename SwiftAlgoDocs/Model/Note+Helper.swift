@@ -47,4 +47,8 @@ extension Note {
     return request
   }
   
+  static func delete(note: Note) {
+    //TODO
+  }
+  
 }

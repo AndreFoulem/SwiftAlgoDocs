@@ -74,5 +74,10 @@ final class NotesTest: XCTestCase {
     XCTAssertTrue(fetchedNotes!.count == 0,
       "Predicate of none should not fetch any objects")
   }
+  
+  func test_Delete_Note() {
+    _ = Note(title: "default note", context: context)
+    
+  }
 
 }
