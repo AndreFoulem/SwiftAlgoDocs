@@ -61,7 +61,18 @@ final class NotesTest: XCTestCase {
     let fetchedNotes = try? context.fetch(fetch)
     
     XCTAssertNotNil(fetchedNotes)
-    XCTAssertTrue(fetchedNotes!.count > 0)
+    XCTAssertTrue(fetchedNotes!.count > 0
+      ,"Predicate should fetch all objects")
+  }
+  
+  func test_Fetch_None_Predicate() {
+    _ = Note(title: "default", context: context)
+    let fetch = Note.fetch(NSPredicate.none)
+    let fetchedNotes = try? context.fetch(fetch)
+    
+    XCTAssertNotNil(fetchedNotes)
+    XCTAssertTrue(fetchedNotes!.count == 0,
+      "Predicate of none should not fetch any objects")
   }
 
 }
