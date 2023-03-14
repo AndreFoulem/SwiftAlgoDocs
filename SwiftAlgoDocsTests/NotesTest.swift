@@ -6,11 +6,19 @@
 //
 
 import XCTest
+import CoreData
 @testable import SwiftAlgoDocs
 
 final class NotesTest: XCTestCase {
 
+    var container: NSPersistentContainer!
+  
+    var context: NSManagedObjectContext {
+      container.viewContext
+    }
+  
     override func setUpWithError() throws {
+  
       
     }
 
