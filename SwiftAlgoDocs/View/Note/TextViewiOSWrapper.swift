@@ -11,6 +11,10 @@ struct TextViewiOSWrapper: UIViewRepresentable {
   
   let note: Note
   
+  func makeCoordinator() -> Coordinator {
+    Coordinator(self, note: note)
+  }
+  
   func makeUIView(context: Context) -> UITextView {
     let view = UITextView()
     
@@ -23,12 +27,29 @@ struct TextViewiOSWrapper: UIViewRepresentable {
     view.layer.borderColor = UIColor.gray.cgColor
     view.layer.cornerRadius = 5
     
-    view.textStorage.setAttributedString(NSAttributedString)
+    view.textStorage.setAttributedString(note.formattedBodyText)
     
+    view.delegate = context.coordinator
     return view
   }
   
   func updateUIView(_ uiView: UITextView, context: Context) {
+    uiView.textStorage.setAttributedString(note.formattedBodyText)
+  }
+  
+  class Coordinator: NSObject, UITextViewDelegate {
+    
+    let note: Note
+    let parent: TextViewiOSWrapper
+    
+    init(_ parent: TextViewiOSWrapper, note: Note) {
+      self.note = note
+      self.parent = parent
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+      note.formattedBodyText = textView.attributedText
+    }
     
   }
   
