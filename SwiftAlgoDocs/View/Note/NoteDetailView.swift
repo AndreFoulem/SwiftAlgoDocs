@@ -32,7 +32,11 @@ struct NoteDetailView: View {
         }
         .pickerStyle(.segmented)
         
+        #if os(iOS)
         TextViewiOSWrapper(note: note)
+        #else
+        TextViewMacOSWrapper(note: note)
+        #endif
         
       }//vs
       .padding()
