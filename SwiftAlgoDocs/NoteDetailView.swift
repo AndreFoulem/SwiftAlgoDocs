@@ -17,6 +17,8 @@ struct NoteDetailView: View {
 //        get: { note.title ?? "" },
 //        set: { note.title = $0 }
 //      )
+      //coments
+      
       
    
       return VStack(spacing:20) {
