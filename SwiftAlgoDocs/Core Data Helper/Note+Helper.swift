@@ -37,7 +37,7 @@ extension Note {
       NSAttributedString()
     }
     set {
-      
+      formattedBodyText_ = newValue.toNSData()
     }
   }
   
