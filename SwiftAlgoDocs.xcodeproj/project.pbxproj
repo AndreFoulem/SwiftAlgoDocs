@@ -18,8 +18,8 @@
 		9027F07129BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027F07029BBB8F100D45A5B /* SwiftAlgoDocsUITestsLaunchTests.swift */; };
 		902A829E29C0216F00BABC97 /* NotesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A829D29C0216F00BABC97 /* NotesTest.swift */; };
 		9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */; };
-		9075C7A029C2250A0015E948 /* TextViewiOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */; };
-		9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */; };
+		9075C7A029C2250A0015E948 /* TextViewiOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */; platformFilter = ios; };
+		9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */; platformFilters = (macos, ); };
 		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 		90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */; };
 		90D94B9929C0DB5000912D23 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D94B9829C0DB5000912D23 /* Status.swift */; };
@@ -94,6 +94,7 @@
 		9027F04129BBB8F000D45A5B = {
 			isa = PBXGroup;
 			children = (
+				9075C7A329C238C70015E948 /* New Group */,
 				9027F04C29BBB8F000D45A5B /* SwiftAlgoDocs */,
 				9027F06329BBB8F100D45A5B /* SwiftAlgoDocsTests */,
 				9027F06D29BBB8F100D45A5B /* SwiftAlgoDocsUITests */,
@@ -179,6 +180,13 @@
 				9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */,
 			);
 			path = Note;
+			sourceTree = "<group>";
+		};
+		9075C7A329C238C70015E948 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		90D3A90329BEAAAC00A1D62E /* Model */ = {
