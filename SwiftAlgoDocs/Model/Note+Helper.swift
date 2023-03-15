@@ -17,6 +17,21 @@ extension Note {
     set { self.title_ = newValue }
   }
   
+  //-> Convert the status_ string optional from db -> return init Status enum with status_ string
+  //-> if status_ is nil -> return init Status with .draft
+  var status: Status {
+    get {
+      if let rawStatus = status_ ,
+         let status = Status(rawValue: rawStatus) {
+        return status
+      } else { return Status.draft }
+    }
+    //-> Convert enum to db as status_ (String)
+    set {
+      status_ = newValue.rawValue
+    }
+  }
+  
   
   convenience init(title: String, context: NSManagedObjectContext) {
     self.init(context: context)
