@@ -19,6 +19,7 @@
 		902A829E29C0216F00BABC97 /* NotesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A829D29C0216F00BABC97 /* NotesTest.swift */; };
 		9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */; };
 		9075C7A029C2250A0015E948 /* TextViewiOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */; };
+		9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */; };
 		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 		90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */; };
 		90D94B9929C0DB5000912D23 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D94B9829C0DB5000912D23 /* Status.swift */; };
@@ -59,6 +60,7 @@
 		902A829D29C0216F00BABC97 /* NotesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTest.swift; sourceTree = "<group>"; };
 		9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
 		9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewiOSWrapper.swift; sourceTree = "<group>"; };
+		9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMacOSWrapper.swift; sourceTree = "<group>"; };
 		90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		90D94B9829C0DB5000912D23 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */,
+				9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */,
 				9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */,
 			);
 			path = Note;
@@ -324,6 +327,7 @@
 				90D94B9929C0DB5000912D23 /* Status.swift in Sources */,
 				9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */,
 				90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */,
+				9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */,
 				9027F05529BBB8F000D45A5B /* ContentView.swift in Sources */,
 				9027F05029BBB8F000D45A5B /* Persistence.swift in Sources */,
 			);
