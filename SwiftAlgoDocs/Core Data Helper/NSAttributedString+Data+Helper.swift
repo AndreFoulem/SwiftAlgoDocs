@@ -19,5 +19,14 @@ extension NSAttributedString {
     
     return result
   }
-  
+}
+
+extension Data {
+  func toAttributedString() -> NSAttributedString? {
+    let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [.documentType: NSAttributedString.DocumentType.rtf, .characterEncoding: String.Encoding.utf8]
+    
+     let result = try? NSAttributedString(data: self,  options: options, documentAttributes: nil)
+    
+    return result
+  }
 }
