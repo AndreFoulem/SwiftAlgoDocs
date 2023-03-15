@@ -9,7 +9,7 @@ import Foundation
 
 extension NSAttributedString {
   
-  func toNSData() -> Data? {
+  func toData() -> Data? {
     
     let options: [NSAttributedString.DocumentAttributeKey: Any] = [.documentType: NSAttributedString.DocumentType.rtf, .characterEncoding: String.Encoding.utf8]
     
