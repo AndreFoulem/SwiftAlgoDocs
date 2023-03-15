@@ -35,11 +35,12 @@ struct TextViewiOSWrapper: UIViewRepresentable {
   
   func updateUIView(_ uiView: UITextView, context: Context) {
     uiView.textStorage.setAttributedString(note.formattedBodyText)
+    context.coordinator.note = note
   }
   
   class Coordinator: NSObject, UITextViewDelegate {
     
-    let note: Note
+    var note: Note
     let parent: TextViewiOSWrapper
     
     init(_ parent: TextViewiOSWrapper, note: Note) {
@@ -56,8 +57,8 @@ struct TextViewiOSWrapper: UIViewRepresentable {
    
 }
 
-//struct TextViewiOSWrapper_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TextViewiOSWrapper()
-//    }
-//}
+struct TextViewiOSWrapper_Previews: PreviewProvider {
+    static var previews: some View {
+      TextViewiOSWrapper(note: Note(title: "title", context: PersistenceController.preview.container.viewContext))
+    }
+}

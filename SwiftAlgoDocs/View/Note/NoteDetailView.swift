@@ -13,22 +13,13 @@ struct NoteDetailView: View {
   @State var status: Status = .draft
 
     var body: some View {
-//      let textBinding = Binding(
-//        get: { note.title ?? "" },
-//        set: { note.title = $0 }
-//      )
-      //coments
-      
-      
-   
+
       return VStack(spacing:20) {
-        Text("Note Detail View")
-        Text("Order \(note.order)")
-        HStack {
-          Text("Title: ")
-          Text(note.title)
-        }
         
+        Text("Note Detail View")
+       
+        TextField("title", text: $note.title)
+          .textFieldStyle(.roundedBorder)
         // $note.status -> Get [$note.status get the status_ and transform to status enum ] Set [ Set the newValue.rawValue to status_ string ]
         Picker(selection: $note.status) {
           ForEach(Status.allCases) { status in
@@ -40,22 +31,9 @@ struct NoteDetailView: View {
           Text("Note's Status")
         }
         .pickerStyle(.segmented)
-
         
-        TextField("title", text: $note.title)
-          .textFieldStyle(.roundedBorder)
+        TextViewiOSWrapper(note: note)
         
-        Button("clear title") {
-          note.title = ""
-        }
-        
-        
-        
-        Button("Delete Note") {
-          let context = note.managedObjectContext
-          context?.delete(note)
-        }
-        .foregroundColor(.pink)
       }//vs
       .padding()
       
