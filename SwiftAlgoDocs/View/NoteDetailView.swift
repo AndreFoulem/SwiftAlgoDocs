@@ -29,7 +29,8 @@ struct NoteDetailView: View {
           Text(note.title)
         }
         
-        Picker(selection: $status) {
+        // $note.status -> Get [$note.status get the status_ and transform to status enum ] Set [ Set the newValue.rawValue to status_ string ]
+        Picker(selection: $note.status) {
           ForEach(Status.allCases) { status in
             Text(status.rawValue)
             //add a .tag to have the picker selectable on rawValue
