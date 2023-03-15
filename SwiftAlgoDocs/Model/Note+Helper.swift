@@ -32,6 +32,16 @@ extension Note {
     }
   }
   
+  var formattedBodyText: NSAttributedString {
+    get {
+      NSAttributedString()
+    }
+    set {
+      
+    }
+  }
+  
+  
   
   convenience init(title: String, context: NSManagedObjectContext) {
     self.init(context: context)

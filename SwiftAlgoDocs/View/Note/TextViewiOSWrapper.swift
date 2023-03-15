@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TextViewiOSWrapper: UIViewRepresentable {
   
+  let note: Note
+  
   func makeUIView(context: Context) -> UITextView {
     let view = UITextView()
     
@@ -16,6 +18,12 @@ struct TextViewiOSWrapper: UIViewRepresentable {
     view.isEditable = true
     view.isSelectable = true
     view.font = UIFont.systemFont(ofSize: 20)
+    
+    view.layer.borderWidth = 1
+    view.layer.borderColor = UIColor.gray.cgColor
+    view.layer.cornerRadius = 5
+    
+    view.textStorage.setAttributedString(NSAttributedString)
     
     return view
   }
