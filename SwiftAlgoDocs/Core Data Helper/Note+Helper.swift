@@ -38,6 +38,13 @@ extension Note {
     }
     set {
       formattedBodyText_ = newValue.toData()
+      bodyText_ = newValue.string.lowercased()
+    }
+  }
+  
+  var bodyText: String {
+    get {
+      bodyText_ ?? ""
     }
   }
   
