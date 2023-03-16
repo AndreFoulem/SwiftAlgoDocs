@@ -22,6 +22,7 @@
 		9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */; platformFilters = (macos, ); };
 		9075C7A529C266290015E948 /* NSAttributedString+Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A429C266290015E948 /* NSAttributedString+Data+Helper.swift */; };
 		90A7F0B229C37B3700EF3EF1 /* NotePhotoSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7F0B129C37B3700EF3EF1 /* NotePhotoSelectorButton.swift */; };
+		90A7F0B629C3809300EF3EF1 /* OptionalmageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7F0B529C3809300EF3EF1 /* OptionalmageView.swift */; };
 		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 		90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */; };
 		90D94B9929C0DB5000912D23 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D94B9829C0DB5000912D23 /* Status.swift */; };
@@ -65,6 +66,7 @@
 		9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMacOSWrapper.swift; sourceTree = "<group>"; };
 		9075C7A429C266290015E948 /* NSAttributedString+Data+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Data+Helper.swift"; sourceTree = "<group>"; };
 		90A7F0B129C37B3700EF3EF1 /* NotePhotoSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePhotoSelectorButton.swift; sourceTree = "<group>"; };
+		90A7F0B529C3809300EF3EF1 /* OptionalmageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalmageView.swift; sourceTree = "<group>"; };
 		90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		90D94B9829C0DB5000912D23 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */,
 				90A7F0B129C37B3700EF3EF1 /* NotePhotoSelectorButton.swift */,
+				90A7F0B529C3809300EF3EF1 /* OptionalmageView.swift */,
 				9075C7A129C2324C0015E948 /* TextViewMacOSWrapper.swift */,
 				9075C79F29C2250A0015E948 /* TextViewiOSWrapper.swift */,
 			);
@@ -345,6 +348,7 @@
 				90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */,
 				9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */,
 				9027F05529BBB8F000D45A5B /* ContentView.swift in Sources */,
+				90A7F0B629C3809300EF3EF1 /* OptionalmageView.swift in Sources */,
 				9027F05029BBB8F000D45A5B /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

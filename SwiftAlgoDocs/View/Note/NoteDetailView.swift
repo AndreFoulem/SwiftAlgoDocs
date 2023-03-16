@@ -38,6 +38,8 @@ struct NoteDetailView: View {
         TextViewMacOSWrapper(note: note)
         #endif
         
+        OptionalmageView(data: note.img)
+        
         NotePhotoSelectorButton(note: note)
         
       }//vs

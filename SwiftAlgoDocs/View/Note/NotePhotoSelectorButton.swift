@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct NotePhotoSelectorButton: View {
-    let note: Note
+    @ObservedObject var note: Note
   
   @State private var selectedItem: PhotosPickerItem? = nil
   
@@ -17,9 +17,12 @@ struct NotePhotoSelectorButton: View {
       PhotosPicker(selection: $selectedItem,
                    matching: .images,
                    photoLibrary: .shared()) {
+        note.img == nil ?
         Text("import an image")
+        : Text("ChangePhoto")
+     
       }
-                   .onChange(of: selectedItem) { newValue in
+      .onChange(of: selectedItem) { newValue in
                      Task {
                        if let data = try? await newValue?.loadTransferable(type: Data.self) {
                          note.img = data
