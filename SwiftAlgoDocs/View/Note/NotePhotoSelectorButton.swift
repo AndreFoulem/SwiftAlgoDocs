@@ -19,6 +19,13 @@ struct NotePhotoSelectorButton: View {
                    photoLibrary: .shared()) {
         Text("import an image")
       }
+                   .onChange(of: selectedItem) { newValue in
+                     Task {
+                       if let data = try? await newValue?.loadTransferable(type: Data.self) {
+                         note.img = data
+                       }
+                     }
+                   }
       
     }
 }
