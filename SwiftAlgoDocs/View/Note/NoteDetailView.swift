@@ -14,7 +14,7 @@ struct NoteDetailView: View {
 
     var body: some View {
 
-      return VStack(spacing:20) {
+      VStack(spacing:20) {
         
         Text("Note Detail View")
        
@@ -37,6 +37,8 @@ struct NoteDetailView: View {
         #else
         TextViewMacOSWrapper(note: note)
         #endif
+        
+        NotePhotoSelectorButton(note: note)
         
       }//vs
       .padding()
