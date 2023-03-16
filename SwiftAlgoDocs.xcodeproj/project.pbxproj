@@ -23,6 +23,7 @@
 		9075C7A529C266290015E948 /* NSAttributedString+Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075C7A429C266290015E948 /* NSAttributedString+Data+Helper.swift */; };
 		90A7F0B229C37B3700EF3EF1 /* NotePhotoSelectorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7F0B129C37B3700EF3EF1 /* NotePhotoSelectorButton.swift */; };
 		90A7F0B629C3809300EF3EF1 /* OptionalmageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7F0B529C3809300EF3EF1 /* OptionalmageView.swift */; };
+		90A7F0B929C3870E00EF3EF1 /* macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7F0B829C3870E00EF3EF1 /* macOS.swift */; platformFilters = (macos, ); };
 		90D3A90529BEAAFF00A1D62E /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */; };
 		90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */; };
 		90D94B9929C0DB5000912D23 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D94B9829C0DB5000912D23 /* Status.swift */; };
@@ -67,6 +68,7 @@
 		9075C7A429C266290015E948 /* NSAttributedString+Data+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Data+Helper.swift"; sourceTree = "<group>"; };
 		90A7F0B129C37B3700EF3EF1 /* NotePhotoSelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePhotoSelectorButton.swift; sourceTree = "<group>"; };
 		90A7F0B529C3809300EF3EF1 /* OptionalmageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalmageView.swift; sourceTree = "<group>"; };
+		90A7F0B829C3870E00EF3EF1 /* macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS.swift; sourceTree = "<group>"; };
 		90D3A90429BEAAFF00A1D62E /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
 		90D3A90629BEAFFD00A1D62E /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		90D94B9829C0DB5000912D23 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9027F04D29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift */,
 				9075C79D29C21D040015E948 /* View */,
 				90D3A90329BEAAAC00A1D62E /* Model */,
+				90A7F0B729C386F400EF3EF1 /* Cross Platform */,
 				9059F04B29BF899800779B6F /* Core Data Helper */,
 				9027F05129BBB8F000D45A5B /* SwiftAlgoDocs.xcdatamodeld */,
 				9027F05629BBB8F100D45A5B /* Assets.xcassets */,
@@ -197,6 +200,14 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		90A7F0B729C386F400EF3EF1 /* Cross Platform */ = {
+			isa = PBXGroup;
+			children = (
+				90A7F0B829C3870E00EF3EF1 /* macOS.swift */,
+			);
+			path = "Cross Platform";
 			sourceTree = "<group>";
 		};
 		90D3A90329BEAAAC00A1D62E /* Model */ = {
@@ -346,6 +357,7 @@
 				90D94B9929C0DB5000912D23 /* Status.swift in Sources */,
 				9059F04D29BF89E800779B6F /* NSPredicate+Helper.swift in Sources */,
 				90D3A90729BEAFFD00A1D62E /* NoteDetailView.swift in Sources */,
+				90A7F0B929C3870E00EF3EF1 /* macOS.swift in Sources */,
 				9075C7A229C2324C0015E948 /* TextViewMacOSWrapper.swift in Sources */,
 				9027F05529BBB8F000D45A5B /* ContentView.swift in Sources */,
 				90A7F0B629C3809300EF3EF1 /* OptionalmageView.swift in Sources */,
