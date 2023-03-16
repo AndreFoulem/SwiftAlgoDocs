@@ -5,6 +5,7 @@
         <attribute name="uuid_" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
+        <attribute name="canonicalTitle" optional="YES" attributeType="String" derived="YES" derivationExpression="canonical:(title_)"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="formattedBodyText_" optional="YES" attributeType="Binary"/>
         <attribute name="img" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>

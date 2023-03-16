@@ -17,7 +17,7 @@ struct NoteDetailView: View {
       VStack(spacing:20) {
         
         Text("Note Detail View")
-       
+               
         TextField("title", text: $note.title)
           .textFieldStyle(.roundedBorder)
         // $note.status -> Get [$note.status get the status_ and transform to status enum ] Set [ Set the newValue.rawValue to status_ string ]
