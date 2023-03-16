@@ -34,7 +34,7 @@ extension Note {
   
   var formattedBodyText: NSAttributedString {
     get {
-      NSAttributedString()
+      formattedBodyText_?.toAttributedString() ?? NSAttributedString(string: "")
     }
     set {
       formattedBodyText_ = newValue.toData()
