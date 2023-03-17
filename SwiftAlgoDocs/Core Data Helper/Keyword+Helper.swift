@@ -18,10 +18,18 @@ extension Keyword {
         return Color.black
       }
     }
-    
     set {
       colorHex_ = newValue.toHex
     }
   }
+  
+  var colors: Color {
+    
+    get { Color(red: red_, green: green_, blue: blue_, opacity: opacity_)}
+    set {}
+    
+  }
+  
+  
 
 }
