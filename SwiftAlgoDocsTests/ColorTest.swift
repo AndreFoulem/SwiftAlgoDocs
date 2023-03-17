@@ -5,21 +5,7 @@ import SwiftUI
 @testable import SwiftAlgoDocs
 
 final class ColorTest: XCTestCase {
-  
-  var controller: PersistenceController!
-  
-  var context: NSManagedObjectContext {
-    controller.container.viewContext
-  }
-  
 
-  override func setUpWithError() throws {
-    self.controller = PersistenceController.createEmpty()
-  }
-
-  override func tearDownWithError() throws {
-    self.controller = nil
-  }
   
   func test_Hex_to_Color() {
     

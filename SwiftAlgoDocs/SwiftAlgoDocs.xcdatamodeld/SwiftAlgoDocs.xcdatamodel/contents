@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" representedClassName="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="blue_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="color" optional="YES" attributeType="Binary"/>
+        <attribute name="color_" optional="YES" attributeType="Binary"/>
         <attribute name="colorHex_" optional="YES" attributeType="String"/>
         <attribute name="green_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="opacity_" optional="YES" attributeType="Double" defaultValueString="1" usesScalarValueType="YES"/>

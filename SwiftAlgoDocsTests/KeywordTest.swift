@@ -31,6 +31,23 @@ final class KeywordTest: XCTestCase {
     print("DEBUG COLOR", retreivedColor)
     
     XCTAssertTrue(retreivedColor == color)
+  }
+  
+  func test_Keyword_default_color() {
+    let black = Color.black
+    let keyword = Keyword(context: context)
+    let defaultColor = keyword.color
+    XCTAssertTrue(defaultColor == black)
+  }
+  
+  
+  func test_Keyword_component_Color() {
+    let color = Color(red: 0, green: 0, blue: 1)
+    let keyword = Keyword(context: context)
+    keyword.color = color
     
+    let retrievedCOlor = keyword.color
+    
+    XCTAssertTrue(retrievedCOlor == color)
   }
 }
