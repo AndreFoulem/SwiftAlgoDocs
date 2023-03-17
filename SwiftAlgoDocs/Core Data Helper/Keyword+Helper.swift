@@ -18,10 +18,9 @@ extension Keyword {
         return Color.black
       }
     }
+    
     set {
-      // newValue
-
-
+      colorHex_ = newValue.toHex
     }
   }
 
