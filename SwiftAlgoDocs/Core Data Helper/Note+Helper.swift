@@ -44,6 +44,7 @@ extension Note {
   }
   
   var bodyText: String {
+    //-> Simple optional handling
     get {
       bodyText_ ?? ""
     }
