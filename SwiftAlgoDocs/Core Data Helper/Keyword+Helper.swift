@@ -39,13 +39,8 @@ extension Keyword {
       } else {
         opacity_ = 1.0
       }
-        
-        
-     
+      
     }
     
   }
-  
-  
-
 }

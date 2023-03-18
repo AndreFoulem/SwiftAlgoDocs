@@ -28,6 +28,7 @@ extension Note {
     }
     //-> Convert enum to db as status_ (String)
     set {
+      // set the new value from the enum
       status_ = newValue.rawValue
     }
   }
