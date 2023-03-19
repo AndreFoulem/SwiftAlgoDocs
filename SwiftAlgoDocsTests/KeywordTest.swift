@@ -46,8 +46,8 @@ final class KeywordTest: XCTestCase {
     let keyword = Keyword(context: context)
     keyword.color = color
     
-    let retrievedCOlor = keyword.color
+    let retrievedColor = keyword.color
     
-    XCTAssertTrue(retrievedCOlor == color)
+    XCTAssertTrue(retrievedColor == color)
   }
 }
