@@ -133,6 +133,7 @@
 			children = (
 				9027F05829BBB8F100D45A5B /* SwiftAlgoDocs.entitlements */,
 				9027F07D29BBD15000D45A5B /* Info.plist */,
+				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
 				9027F04D29BBB8F000D45A5B /* SwiftAlgoDocsApp.swift */,
 				9075C79D29C21D040015E948 /* View */,
 				90D3A90329BEAAAC00A1D62E /* Model */,
@@ -180,7 +181,6 @@
 				90B5CA1729C4DA2300D212E5 /* Keyword+Helper.swift */,
 				90B5CA1929C4DCEB00D212E5 /* Color+Helper.swift */,
 				9075C7A429C266290015E948 /* NSAttributedString+Data+Helper.swift */,
-				9027F04F29BBB8F000D45A5B /* Persistence.swift */,
 				9059F04C29BF89E800779B6F /* NSPredicate+Helper.swift */,
 			);
 			path = "Core Data Helper";
